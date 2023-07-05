@@ -6,9 +6,11 @@ import ClipLoader from "react-spinners/ClipLoader";
 type MovieSearchProps = {};
 
 const MoviesSearch: React.FC<MovieSearchProps> = () => {
+  const [searchVal, setSearchVal] = React.useState("hello");
+
   return (
     <div style={{ width: "100%" }}>
-      <SearchBar />
+      <SearchBar searchVal={searchVal} setSearchVal={setSearchVal}/>
       <MoviesList />
       <ClipLoader
         color={"#ffffff"}
