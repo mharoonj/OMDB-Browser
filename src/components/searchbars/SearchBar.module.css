@@ -8,9 +8,9 @@
     border-radius: 0.8rem;
     background: #326660;
     box-sizing: border-box;
-  }
-  
-  .inputWrap input{
+}
+
+.inputWrap input {
     width: 100%;
     background-color: transparent;
     height: 2.9rem;
@@ -18,19 +18,20 @@
     padding-left: 10px;
     color: whitesmoke;
     font-size: 1rem;
-  }
-  .inputWrap input:focus { 
+}
+
+.inputWrap input:focus {
     outline: none !important;
     /* border-color: #719ECE; */
     /* box-shadow: 0 0 10px #719ECE; */
- }
+}
 
-  .inputWrap i {
+.inputWrap i {
     font-size: 1.5rem;
     color: white;
-  }
+}
 
-  .searchIcon{
+.searchIcon {
     color: white;
     margin: 3px;
-  }
+}

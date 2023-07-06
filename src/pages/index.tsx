@@ -1,12 +1,11 @@
-import Head from 'next/head'
+import Head from "next/head";
 
-import MoviesSearch from '../components/movies'
+import MoviesSearch from "../components/movies";
 
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Search.module.css'
+import { Inter } from "next/font/google";
+import styles from "@/styles/Search.module.css";
 
-
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Search() {
   return (
@@ -19,9 +18,8 @@ export default function Search() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         {/* update with search page code */}
-        Edit file [src/pages/index.tsx] to update this page with search logic.
         <MoviesSearch />
       </main>
     </>
-  )
+  );
 }

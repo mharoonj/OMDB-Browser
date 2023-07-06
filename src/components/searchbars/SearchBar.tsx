@@ -1,5 +1,5 @@
 import React, { useCallback } from "react";
-import debounce from 'lodash.debounce';
+import debounce from "lodash.debounce";
 import styles from "./SearchBar.module.css";
 import { FaSearch } from "react-icons/fa";
 
@@ -9,12 +9,12 @@ type SearchBarProps = {
 };
 
 const SearchBar: React.FC<SearchBarProps> = ({ searchVal, setSearchVal }) => {
-    const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchVal(e.target.value);
   };
-  const debouncedChangeHandler = useCallback(
-    debounce(handleInput, 800)
-  , []);
+  const debouncedChangeHandler = useCallback(debounce(handleInput, 800), []);
+  
+  // can be implemented later
   const handleClearBtn = () => {
     setSearchVal("");
   };
@@ -26,7 +26,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ searchVal, setSearchVal }) => {
 
         <input
           onChange={debouncedChangeHandler}
-        //   value={searchVal}
+          //   value={searchVal}
           type="text"
           name="search"
           id="search"
