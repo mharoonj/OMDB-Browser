@@ -9,7 +9,6 @@ type SearchBarProps = {
 };
 
 const SearchBar: React.FC<SearchBarProps> = ({ searchVal, setSearchVal }) => {
-  console.log(searchVal, setSearchVal)
     const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchVal(e.target.value);
   };

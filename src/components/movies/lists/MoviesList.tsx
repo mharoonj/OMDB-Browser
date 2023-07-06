@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Card from "../cards/Card";
+import { MovieCardInterface } from "../types/movie-types";
 
 const infos: any = {
   poster:
@@ -22,40 +23,28 @@ const infos: any = {
 //   "Poster": "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
 // },
 
-type MoviesListProps = {};
+type MoviesListProps = {
+  movies: MovieCardInterface[],
+  nextPage: Function
+};
 
-const MoviesList: React.FC<MoviesListProps> = () => {
-  const [state, setState] = useState({
-    items: Array.from({ length: 20 }),
-  });
-
-  const style = {
-    height: 30,
-    border: "1px solid green",
-    margin: 6,
-    padding: 8,
-  };
+const MoviesList: React.FC<MoviesListProps> = ({movies, nextPage}) => {
   const fetchMoreData = () => {
-    // a fake async api call like which sends
-    // 20 more records in 1.5 secs
-    setTimeout(() => {
-      setState({
-        items: state.items.concat(Array.from({ length: 20 })),
-      });
-    }, 1500);
+    console.log("FETCHING MORE ........................")
+    nextPage()
   };
 
   return (
     <div style={{ display: "flex", maxWidth: "100%" }}>
       <InfiniteScroll
-        dataLength={state.items.length}
+        dataLength={movies.length}
         next={fetchMoreData}
         hasMore={true}
-        loader={<h4>Loading...</h4>}
+        loader={<div><h4>Loading...</h4></div>}
         style={{ display: "flex", flexWrap: "wrap" }}
       >
-        {state.items.map((i, index) => (
-          <Card key={index} infos={infos} />
+        {movies.map((infos, index) => (
+          <Card key={infos.Title + index} infos={infos} />
         ))}
       </InfiniteScroll>
     </div>
