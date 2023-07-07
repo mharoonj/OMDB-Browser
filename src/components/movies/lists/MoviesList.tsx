@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ClipLoader from "react-spinners/ClipLoader";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Card from "../cards/Card";
 import { MovieCardInterface } from "../types/movie-types";
@@ -19,11 +20,16 @@ const MoviesList: React.FC<MoviesListProps> = ({ movies, nextPage }) => {
         dataLength={movies.length}
         next={fetchMoreData}
         hasMore={true}
-        loader={
-          <div>
-            <h4>Loading...</h4>
-          </div>
-        }
+        loader={<div>
+          <ClipLoader
+          color={"#ffffff"}
+          loading={false}
+          // cssOverride={override}
+          size={150}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+        />
+        </div>}
         style={{ display: "flex", flexWrap: "wrap" }}
       >
         {movies.map((infos, index) => (
