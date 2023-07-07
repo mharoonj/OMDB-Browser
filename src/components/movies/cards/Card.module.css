@@ -1,11 +1,3 @@
-/* *,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
-
 .movies__container a {
     text-decoration: none;
 }
@@ -35,6 +27,7 @@
     text-align: center;
     font-family: 'Roboto', sans-serif;
     background-size: cover;
+    cursor: pointer;
 }
 
 .movie:hover {
@@ -80,17 +73,7 @@
     font-size: 1.1em;
 }
 
-.movie__duration {
-    transform: scale(0);
-    opacity: 0;
-    transition: transform 0.24s ease-in 0.15s, opacity 0.3s linear;
-}
 
-.movie__director {
-    transform: scale(0);
-    opacity: 0;
-    transition: transform 0.24s ease-in 0.2s, opacity 0.3s linear;
-}
 
 .movie__year {
     transform: scale(0);
@@ -98,52 +81,3 @@
     transition: transform 0.24s ease-in 0.25s, opacity 0.3s linear;
 }
 
-.movie__cast {
-    transform: scale(0);
-    opacity: 0;
-    transition: transform 0.24s ease-in 0.3s, opacity 0.3s linear;
-    font-size: .9em;
-}
-
-.movie__imdb {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    justify-self: flex-end;
-    padding: 0 10px;
-}
-
-.movie__rating {
-    transform: scale(0);
-    opacity: 0;
-    transition: transform 0.24s ease-in 0.35s, opacity 0.3s linear;
-}
-
-.fa-star {
-    width: 9px;
-    font-size: 1.2em;
-    display: inline-block;
-    overflow: hidden;
-}
-
-.fa-star.checked {
-    color: yellow;
-}
-
-.movie__imdb_button {
-    width: 60px;
-    height: 30px;
-    border-radius: 5px;
-    background-color: #EBBA33;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #000;
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.1em;
-    font-weight: bold;
-    cursor: pointer;
-    transform: scale(0);
-    opacity: 0;
-    transition: transform 0.24s ease-in 0.4s, opacity 0.3s linear;
-}
