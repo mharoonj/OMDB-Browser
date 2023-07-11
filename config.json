@@ -1,4 +1,6 @@
 {
     "SERVER_URI": "https://www.omdbapi.com",
-    "API_KEY": "542fb3a3"
+    "API_KEY": "542fb3a3",
+    "TMDB_SERVER_URI": "https://api.themoviedb.org",
+    "TMDB_API_KEY": "5601078379e2889dad496a93548b2b80"
 }
