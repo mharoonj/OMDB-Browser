@@ -17,7 +17,6 @@ const MoviesSearch: React.FC<MovieSearchProps> = () => {
   );
 
   useEffect(() => {
-    console.log(data);
     if (data && data.Search) {
       const newMovies = movies.concat(data.Search);
       setMovies(newMovies);
