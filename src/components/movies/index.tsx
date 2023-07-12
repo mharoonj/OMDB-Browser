@@ -36,13 +36,12 @@ const MoviesSearch: React.FC<MovieSearchProps> = () => {
 
   return (
     <div style={{ width: "100%" }}>
-      <SearchBar searchVal={searchVal} setSearchVal={setSearchVal} />
+      <SearchBar setSearchVal={setSearchVal} />
       <MoviesList movies={movies} nextPage={nextPage} />
       {isLoading && (
         <ClipLoader
           color={"#ffffff"}
           loading={false}
-          // cssOverride={override}
           size={150}
           aria-label="Loading Spinner"
           data-testid="loader"

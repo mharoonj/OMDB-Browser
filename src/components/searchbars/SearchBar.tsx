@@ -4,11 +4,10 @@ import styles from "./SearchBar.module.css";
 import { FaSearch } from "react-icons/fa";
 
 type SearchBarProps = {
-  searchVal: string;
   setSearchVal: Function;
 };
 
-const SearchBar: React.FC<SearchBarProps> = ({ searchVal, setSearchVal }) => {
+const SearchBar: React.FC<SearchBarProps> = ({ setSearchVal }) => {
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchVal(e.target.value);
   };
@@ -26,7 +25,6 @@ const SearchBar: React.FC<SearchBarProps> = ({ searchVal, setSearchVal }) => {
 
         <input
           onChange={debouncedChangeHandler}
-          //   value={searchVal}
           type="text"
           name="search"
           id="search"
